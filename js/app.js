@@ -93,25 +93,22 @@ window.addEventListener('scroll', sectionActive)
     const navItems = document.querySelectorAll('.list-item')
       
       if(event.target === navItems[0]){
-        window.scrollTo({
-          top: 200,
+        sections[0].scrollIntoView({
           behavior: 'smooth'
         })
         console.log('section 1')
       }
       if(event.target === navItems[1]){
-        window.scrollTo({
-          top: 1100,
+        sections[1].scrollIntoView({
           behavior: 'smooth'
         })
-        console.log('section 2')
+        console.log('section 1')
       }
       if(event.target === navItems[2]){
-        window.scrollTo({
-          top: 2000,
+        sections[2].scrollIntoView({
           behavior: 'smooth'
         })
-        console.log('section 3')
+        console.log('section 1')
       }
          
 
