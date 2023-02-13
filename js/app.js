@@ -76,15 +76,13 @@ window.addEventListener('scroll', sectionActive)
   function sectionActive(){
     // function to calculate srcoll height 
     let scroll = window.scrollY    
-    if(scroll === sections[0].scrollTop){
+    if(scroll == sections[0].scrollTop){
       console.log('Section 1 active')
     }
-    if(scroll == 200){
-      console.log('hello')
-    }
-    if(scroll == 200){
-      console.log('hello')
-    }           
+    // if(scroll == 200){
+    //   console.log('hello')
+    // }
+     
       console.log(scroll)     
     }  
 
@@ -93,16 +91,29 @@ window.addEventListener('scroll', sectionActive)
 
   window.addEventListener('click', (event)=>{
     const navItems = document.querySelectorAll('.list-item')
-    
+      
       if(event.target === navItems[0]){
+        window.scrollTo({
+          top: 200,
+          behavior: 'smooth'
+        })
         console.log('section 1')
       }
       if(event.target === navItems[1]){
+        window.scrollTo({
+          top: 1100,
+          behavior: 'smooth'
+        })
         console.log('section 2')
       }
       if(event.target === navItems[2]){
+        window.scrollTo({
+          top: 2000,
+          behavior: 'smooth'
+        })
         console.log('section 3')
-      }      
+      }
+         
 
   })
 
