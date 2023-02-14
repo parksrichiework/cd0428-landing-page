@@ -74,14 +74,26 @@ nav.setAttribute('style', 'background-color: #fff; height: 3em;')
 window.addEventListener('scroll', sectionActive)
 
   function sectionActive(){
+    // variable to hold all <li> in <nav> 
+    const navItems = document.querySelectorAll('.list-item')
+
     // function to calculate srcoll height 
-    let scroll = window.scrollY    
-    if(scroll == sections[0]){
+    let scroll = window.scrollY
+    let header = document.querySelector('.main__hero')
+
+    if(scroll > header.scrollHeight && scroll < sections[0].scrollHeight){
+      sections[0].classList.toggle('your-active-class')
       console.log('Section 1 active')
     }
-    // if(scroll == 200){
-    //   console.log('hello')
-    // }
+    if(scroll > sections[0].scrollHeight && scroll < sections[1].scrollHeight){
+      sections[1].classList.toggle('your-active-class')
+      console.log('Section 2 active')
+    }
+    if(scroll > sections[1].scrollHeight && scroll < sections[2].scrollHeight){
+      sections[2].classList.toggle('your-active-class')
+      console.log('Section 3 active')
+    }
+   
      
       console.log(scroll)     
     }  
@@ -91,27 +103,15 @@ window.addEventListener('scroll', sectionActive)
 
   window.addEventListener('click', (event)=>{
     const navItems = document.querySelectorAll('.list-item')
-      
-      if(event.target === navItems[0]){
-        sections[0].scrollIntoView({
-          behavior: 'smooth'
-        })
-        console.log('Scrolled to section 1')
-      }
-      if(event.target === navItems[1]){
-        sections[1].scrollIntoView({
-          behavior: 'smooth'
-        })
-        console.log('Scrolled to section 2')
-      }
-      if(event.target === navItems[2]){
-        sections[2].scrollIntoView({
-          behavior: 'smooth'
-        })
-        console.log('Scrolled to section 3')
-      }
-         
-
+    
+      for (let i=0; i <= navItems.length ; i++){
+        if(event.target === navItems[i]){
+          sections[i].scrollIntoView({
+            behavior: 'smooth'
+          })
+          console.log('Scrolled to section 1')
+        }
+      }                 
   })
 
 /**
