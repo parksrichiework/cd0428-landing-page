@@ -46,7 +46,7 @@ let sections = document.querySelectorAll('section')
 // declare function to create a new list item 
 function addLi(title){
     let newLi = document.createElement('li')
-    newLi.setAttribute('style', 'font-size: 1em; color: darkblue; padding: 12px 1em;')
+    newLi.setAttribute('style', 'font-size: 1em; color: darkblue; margin: 1em; padding: 0 1em;')
     newLi.setAttribute('class', 'list-item')
     newLi.textContent = title
     ulNav.appendChild(newLi)   
@@ -109,10 +109,13 @@ window.addEventListener('scroll', sectionActive)
           sections[i].scrollIntoView({
             behavior: 'smooth'
           })
+          navItems[i].style.backgroundColor= 'lightgrey'
           console.log('Scrolled to section 1')
+        } else {
+          navItems[i].style.backgroundColor= '#fff'
         }
       }                 
-  })
+    })
 
 /**
  * End Main Functions
