@@ -76,7 +76,7 @@ window.addEventListener('scroll', sectionActive)
   function sectionActive(){
     // function to calculate srcoll height 
     let scroll = window.scrollY    
-    if(scroll == sections[0].scrollTop){
+    if(scroll == sections[0]){
       console.log('Section 1 active')
     }
     // if(scroll == 200){
@@ -96,19 +96,19 @@ window.addEventListener('scroll', sectionActive)
         sections[0].scrollIntoView({
           behavior: 'smooth'
         })
-        console.log('section 1')
+        console.log('Scrolled to section 1')
       }
       if(event.target === navItems[1]){
         sections[1].scrollIntoView({
           behavior: 'smooth'
         })
-        console.log('section 1')
+        console.log('Scrolled to section 2')
       }
       if(event.target === navItems[2]){
         sections[2].scrollIntoView({
           behavior: 'smooth'
         })
-        console.log('section 1')
+        console.log('Scrolled to section 3')
       }
          
 
