@@ -67,7 +67,7 @@ section {
 .navbar__menu ul {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: space-between;
     padding-left: 0;
     margin: 0;
     text-align: right;
@@ -75,11 +75,8 @@ section {
 
 .navbar__menu li {
     display: flex;
-    width: fit-content;
+    width: fit-content;    
 }
-
-
-
 
 
 .navbar__menu li:hover {
