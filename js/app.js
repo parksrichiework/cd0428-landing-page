@@ -66,7 +66,7 @@ let sections = document.querySelectorAll('section')
 // RUBRIC NEED: declare function to create a new list item 
 function addLi(title){
     let newLi = document.createElement('li')
-    newLi.setAttribute('style', 'font-size: 1em; color: darkblue; padding: 1em 1em; height: 1em;')
+    newLi.setAttribute('style', 'font-size: 1em; color: darkblue; padding: 1em 1em; height: 1em; width: fit-content;')
     newLi.setAttribute('class', 'list-item')
     newLi.textContent = title
     ulNav.appendChild(newLi)   
