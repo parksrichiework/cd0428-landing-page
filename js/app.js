@@ -112,10 +112,12 @@ nav.setAttribute('style', 'background-color: #fff; height: 3em;')
       // add or remove "active" class based on active section
 
       if (top.top <= window.innerHeight && top.bottom >= window.innerHeight){
-        listItems[i].style.background = 'lightgrey'        
+        listItems[i].style.background = 'lightgrey'
+        listItems[i].style.transition = '0.3s ease-in-out'     
         sections[i].classList.add('active')        
       } else {
-        listItems[i].style.background = 'white'        
+        listItems[i].style.background = 'white'
+        listItems[i].style.transition = '0.3s ease-in-out'       
         sections[i].classList.remove('active')
       }   
 
