@@ -31,8 +31,7 @@ const ulNav = document.querySelector('#navbar__list')
 // all unordered list items (saved as an array)
 let navItems = document.querySelectorAll('.list-item')
 
-// declare array for all sections 
-let sections = document.querySelectorAll('section')
+
 
 //
 
@@ -42,6 +41,29 @@ let sections = document.querySelectorAll('section')
  * Start Helper Functions
  * 
 */
+
+// RUBRIC NEED: declare function to create a new sections
+function addSection(title){
+  let main = document.querySelector('#main-content')
+  let newSection = document.createElement('section')
+  newSection.setAttribute('id', `section${title}` )
+  newSection.setAttribute('data-nav', `Section ${title}`)  
+  newSection.innerHTML = `
+  <div class="landing__container">
+    <h2>Section ${title}</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+    <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+  </div>`
+  main.appendChild(newSection)
+}
+
+// RUBRIC NEED: build new section(s)
+// create new section at the end of body
+addSection(4)
+
+// declare array for all sections 
+let sections = document.querySelectorAll('section')
 
 // RUBRIC NEED: declare function to create a new list item 
 function addLi(title){
@@ -63,6 +85,12 @@ function addLi(title){
 addLi(sections[0].id)
 addLi(sections[1].id)
 addLi(sections[2].id)
+addLi(sections[3].id)
+
+
+
+
+
 
 
 // assign style properties to nav 
