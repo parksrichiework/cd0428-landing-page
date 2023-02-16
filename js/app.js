@@ -113,7 +113,8 @@ nav.setAttribute('style', 'background-color: #fff; height: 3em;')
     for (let i=0; i <= navItems.length ; i++){  
       let top1 = sections[0].getBoundingClientRect()      
       let top2 = sections[1].getBoundingClientRect()      
-      let top3 = sections[2].getBoundingClientRect()  
+      let top3 = sections[2].getBoundingClientRect()
+      let top4 = sections[3].getBoundingClientRect()  
 
       let listItems = document.querySelectorAll('.list-item')
       
@@ -123,24 +124,39 @@ nav.setAttribute('style', 'background-color: #fff; height: 3em;')
         listItems[0].style.background = 'lightgrey'
         listItems[1].style.background = 'white'
         listItems[2].style.background = 'white'
+        listItems[3].style.background = 'white'
         sections[0].classList.add('active')
         sections[1].classList.remove('active')
         sections[2].classList.remove('active')
+        sections[3].classList.remove('active')
       } else if (top2.top <= window.innerHeight && top2.bottom >= window.innerHeight){
         listItems[1].style.background = 'lightgrey'
         listItems[0].style.background = 'white'
         listItems[2].style.background = 'white'
+        listItems[3].style.background = 'white'
         sections[1].classList.add('active')
         sections[0].classList.remove('active')
         sections[2].classList.remove('active')
+        sections[3].classList.remove('active')
       } else if (top3.top <= window.innerHeight && top3.bottom >= window.innerHeight){
         listItems[2].style.background = 'lightgrey'
         listItems[0].style.background = 'white'
         listItems[1].style.background = 'white'
+        listItems[3].style.background = 'white'
         sections[2].classList.add('active')
         sections[0].classList.remove('active')
         sections[1].classList.remove('active')
-      }    
+        sections[3].classList.remove('active')
+      } else if (top4.top <= window.innerHeight && top4.bottom >= window.innerHeight){
+        listItems[3].style.background = 'lightgrey'
+        listItems[0].style.background = 'white'
+        listItems[1].style.background = 'white'
+        listItems[2].style.background = 'white'
+        sections[3].classList.add('active')
+        sections[0].classList.remove('active')
+        sections[1].classList.remove('active')
+        sections[2].classList.remove('active')
+      }     
     }
   })  
 
