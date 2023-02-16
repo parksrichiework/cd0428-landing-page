@@ -33,6 +33,7 @@ let navItems = document.querySelectorAll('.list-item')
 
 
 
+
 //
 
 
@@ -44,7 +45,7 @@ let navItems = document.querySelectorAll('.list-item')
 
 // RUBRIC NEED: declare function to create a new sections
 function addSection(title){
-  let main = document.querySelector('#main-content')
+  let main = document.querySelector('main')
   let newSection = document.createElement('section')
   newSection.setAttribute('id', `section${title}` )
   newSection.setAttribute('data-nav', `Section ${title}`)  
