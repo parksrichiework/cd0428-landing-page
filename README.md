@@ -29,16 +29,26 @@ For specific, detailed instructions, look at the project instructions in the Uda
 Code editor: Visual Studio Code
 
 ## Installation
+Download Visual Studio Code here:
+
+[link]
+(https://code.visualstudio.com/Download)
+
+<a href="https://code.visualstudio.com/Download">link</a>
 
 ## Files
 index.html
 css/styles.css
 js/app.js
+README.md
 
 ## Copyright
 
 ## Credits
- 
- Udacity.com
+[link]
+(https://www.udacity.com/) 
+
+<a href="https://www.udacity.com/">link</a>
+
 
 ## Known Bugs
